@@ -11,7 +11,9 @@ function simulateRedirect(portalName, url) {
   // Simulate secure redirect progress
   setTimeout(() => {
     modal.classList.remove('active');
-    alert(`[SECURE HANDSHAKE SUCCESSFUL]\n\nRedirecting you securely to:\n${url}\n\n(In production, this triggers an HTTPS redirection to your login portal.)`);
+    setTimeout(() => {
+      window.location.href = url;
+    }, 300); // allow close animation to finish
   }, 2000);
 }
 

@@ -1,651 +1,1295 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Smart Parking Management System (PMS) - Enterprise-level smart parking monitoring, automated ticketing, ANPR scanning, and corporate portal access.">
-  <title>Smart Parking Management System | Intelligent Parking Ecosystem</title>
-  
-  <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Smart Parking Management System (PMS) - Enterprise-level smart parking monitoring, automated ticketing, ANPR scanning, and corporate portal access."
+    />
+    <title>
+      Smart Parking Management System | Intelligent Parking Ecosystem
+    </title>
 
-  <!-- Background Decorative Glowing Blurs -->
-  <div class="bg-glow-container" aria-hidden="true">
-    <div class="bg-glow-1"></div>
-    <div class="bg-glow-2"></div>
-    <div class="bg-glow-3"></div>
-  </div>
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Background Decorative Glowing Blurs -->
+    <div class="bg-glow-container" aria-hidden="true">
+      <div class="bg-glow-1"></div>
+      <div class="bg-glow-2"></div>
+      <div class="bg-glow-3"></div>
+    </div>
 
-  <!-- Header & Navigation -->
-  <header id="header">
-    <nav class="nav-container">
-      <a href="#" class="logo-link">
-        <!-- SVG Smart Parking Wave/Leaf Stylized Logo -->
-        <svg class="logo-svg" viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Blue wave -->
-          <path d="M20 70C35 40 55 10 90 15C75 40 55 85 20 70Z" fill="#1d4ed8" opacity="0.85"/>
-          <!-- Green wave -->
-          <path d="M15 75C40 55 70 30 100 45C75 60 45 90 15 75Z" fill="#3cb779" opacity="0.9"/>
-          <!-- Little dot connector -->
-          <circle cx="50" cy="48" r="4" fill="#ffffff" />
-        </svg>
-        <div class="logo-text">
-          <span class="brand-bold">Smart</span>
-          <span class="brand-color">Parking</span>
-        </div>
-      </a>
-      
-      <!-- Desktop Menu -->
-      <ul class="nav-menu" id="navMenu">
-        <li><a href="#" class="nav-item active" id="nav-home">Home</a></li>
-        <li><a href="#features" class="nav-item" id="nav-features">Features</a></li>
-        <li><a href="#workflow" class="nav-item" id="nav-workflow">How It Works</a></li>
-        <li><a href="#portals" class="nav-item" id="nav-portals">Access Portals</a></li>
-        <li><a href="#about" class="nav-item" id="nav-about">About Solution</a></li>
-        <li><a href="#download" class="nav-item" id="nav-download">Mobile App</a></li>
-        <li><button onclick="scrollToElement('#portals')" class="nav-btn">Access Login</button></li>
-      </ul>
-      
-      <!-- Mobile Hamburger Menu Button -->
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </nav>
-  </header>
-
-  <main>
-    <!-- Hero Section -->
-    <section class="hero-section" id="home">
-      <div class="hero-content-wrapper">
-        <div class="hero-content">
-          <div class="hero-tag">
-            <span class="pulse"></span>
-            <span>Enterprise Suite v4.2 &bull; Active & Online</span>
-          </div>
-          <h1 class="hero-title">
-            Next-Gen <span class="gradient-text">Intelligent Parking</span> Management
-          </h1>
-          <p class="hero-desc">
-            Streamline vehicle entry-exit rates, automate ticket generation, and optimize floor space allocation with our secure, IoT-connected smart parking ecosystem.
-          </p>
-          <div class="hero-actions">
-            <button onclick="scrollToElement('#portals')" class="btn-primary">
-              Access System Portals
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </button>
-            <button onclick="scrollToElement('#about')" class="btn-secondary">Learn More</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Hero stats moved outside wrapper for responsive ordering -->
-      <div class="hero-stats">
-        <div class="stat-item">
-          <span class="stat-num" id="stat-slots">99.8</span>
-          <span class="stat-label">System Uptime</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num" id="stat-cameras">10</span>
-          <span class="stat-label">ANPR Accuracy</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num" id="stat-clients">200</span>
-          <span class="stat-label">Locations Monitored</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="features-section reveal-element">
-      <div style="text-align: center; display: flex; flex-direction: column; align-items: center;">
-        <span class="section-tag">Key Pillars</span>
-        <h2 class="section-title">Cutting-Edge Features</h2>
-        <p class="section-subtitle">
-          Engineered for high-throughput transit points, Smart Parking provides complete visibility and command over parking environments.
-        </p>
-      </div>
-
-      <div class="features-grid">
-        <!-- Feature 1 -->
-        <div class="feature-card">
-          <div class="feature-icon-wrapper">
-            <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-            </svg>
-          </div>
-          <h3>Real-time Monitoring</h3>
-          <p>Instantly tracks slot utilization and occupancy trends. Prevents driver frustration by directing them straight to vacant stalls.</p>
-        </div>
-
-        <!-- Feature 2 -->
-        <div class="feature-card">
-          <div class="feature-icon-wrapper">
-            <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z"></path>
-            </svg>
-          </div>
-          <h3>Automated Ticketing</h3>
-          <p>Generates encrypted paperless receipts or entry barcodes instantly. Simplifies cashier tasks and decreases vehicle lane delays.</p>
-        </div>
-
-        <!-- Feature 3 -->
-        <div class="feature-card">
-          <div class="feature-icon-wrapper">
-            <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-            </svg>
-          </div>
-          <h3>Corporate Dashboards</h3>
-          <p>Allows businesses to reserve zones, manage employee season passes, and receive automated weekly invoicing summaries.</p>
-        </div>
-
-        <!-- Feature 4 -->
-        <div class="feature-card">
-          <div class="feature-icon-wrapper">
-            <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-            </svg>
-          </div>
-          <h3>Reporting & Analytics</h3>
-          <p>Aggregates traffic graphs, peak-hour bottlenecks, and financial statistics. Generates smart reports for managers automatically.</p>
-        </div>
-
-        <!-- Feature 5 -->
-        <div class="feature-card">
-          <div class="feature-icon-wrapper">
-            <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
-            </svg>
-          </div>
-          <h3>ANPR Scanning</h3>
-          <p>Identifies number plates within milliseconds. Cross-checks blacklists and opens barriers automatically for verified employees.</p>
-        </div>
-
-        <!-- Feature 6 -->
-        <div class="feature-card">
-          <div class="feature-icon-wrapper">
-            <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
-            </svg>
-          </div>
-          <h3>Mobile Touch Optimized</h3>
-          <p>Fully optimized for touch gestures. Download the companion application on <a href="https://apps.apple.com/pk/app/parkify-smart-parking/id6766315519" target="_blank" rel="noopener noreferrer" style="color: var(--primary); font-weight: 600; text-decoration: underline;">iOS (Apple App Store)</a> and <a href="https://play.google.com/store/apps/details?id=com.cdaparkingapp&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" style="color: var(--primary); font-weight: 600; text-decoration: underline;">Android (Google Play Store)</a>.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section id="workflow" class="workflow-section reveal-element">
-      <div style="text-align: center; display: flex; flex-direction: column; align-items: center;">
-        <span class="section-tag">Operations</span>
-        <h2 class="section-title">How Smart Parking Works</h2>
-        <p class="section-subtitle">
-          A fully automated, high-throughput vehicle lifecycle engineered for corporate facilities and premium office spaces.
-        </p>
-      </div>
-
-      <div class="workflow-steps">
-        <div class="workflow-step-connector"></div>
-        
-        <!-- Step 1 -->
-        <div class="workflow-step-card">
-          <div class="step-badge">1</div>
-          <h3>ANPR Scanning</h3>
-          <p>As the vehicle approaches the lane, high-resolution cameras identify the plate number within 200 milliseconds.</p>
-        </div>
-
-        <!-- Step 2 -->
-        <div class="workflow-step-card">
-          <div class="step-badge">2</div>
-          <h3>Barrier Release</h3>
-          <p>The gate opens automatically for registered VIPs and pass holders, or prints an encrypted ticket for visitors.</p>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="workflow-step-card">
-          <div class="step-badge">3</div>
-          <h3>Smart Navigation</h3>
-          <p>Floor indicators route drivers to their assigned parking zones, avoiding layout bottlenecks.</p>
-        </div>
-
-        <!-- Step 4 -->
-        <div class="workflow-step-card">
-          <div class="step-badge">4</div>
-          <h3>Cashless Exit</h3>
-          <p>Exit cameras confirm validation status, process digital payments automatically, and open the gate.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- User Portals Section -->
-    <section id="portals" class="portals-section reveal-element">
-      <div style="text-align: center; display: flex; flex-direction: column; align-items: center;">
-        <span class="section-tag">System Gates</span>
-        <h2 class="section-title">Secure Portal Integration</h2>
-        <p class="section-subtitle">
-          Select your dedicated portal to access parking configuration, operational modules, or corporate user summaries securely.
-        </p>
-      </div>
-
-      <div class="portals-grid">
-        <!-- Admin Portal Card -->
-        <div class="portal-card admin">
-          <div class="portal-header">
-            <span class="portal-badge">Admin Access</span>
-            <h3 class="portal-title">System Admin</h3>
-            <p class="portal-desc">Manage broad settings, rates, security clearances, and global financial configurations.</p>
-            
-            <ul class="portal-features-list">
-              <li class="portal-feat-item">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
-                Configure parking zone rates
-              </li>
-              <li class="portal-feat-item">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
-                Manage operator & client accounts
-              </li>
-              <li class="portal-feat-item">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
-                Review global system analytics
-              </li>
-            </ul>
-          </div>
-          
-          <button onclick="simulateRedirect('Admin Portal', 'https://admin.smartparking-pms.com')" class="portal-btn">
-            Login as Admin
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
-          </button>
-        </div>
-
-        <!-- Operator Portal Card -->
-        <div class="portal-card operator">
-          <div class="portal-header">
-            <span class="portal-badge">Operator Access</span>
-            <h3 class="portal-title">Parking Operator</h3>
-            <p class="portal-desc">Monitor live lane transactions, validate tickets manually, and check camera feeds.</p>
-            
-            <ul class="portal-features-list">
-              <li class="portal-feat-item">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
-                Live gate & barrier override
-              </li>
-              <li class="portal-feat-item">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
-                Process physical parking tickets
-              </li>
-              <li class="portal-feat-item">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
-                Log shift details and receipts
-              </li>
-            </ul>
-          </div>
-          
-          <button onclick="simulateRedirect('Operator Portal', 'https://operator.smartparking-pms.com')" class="portal-btn">
-            Login as Operator
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
-          </button>
-        </div>
-
-        <!-- Corporate Client Portal Card -->
-        <div class="portal-card client">
-          <div class="portal-header">
-            <span class="portal-badge">Client Access</span>
-            <h3 class="portal-title">Corporate Client</h3>
-            <p class="portal-desc">Manage employee parking clearances, invoices, and reserve corporate zones.</p>
-            
-            <ul class="portal-features-list">
-              <li class="portal-feat-item">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
-                Reserve spot pools dynamically
-              </li>
-              <li class="portal-feat-item">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
-                Track employee validation history
-              </li>
-              <li class="portal-feat-item">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
-                Download unified monthly invoices
-              </li>
-            </ul>
-          </div>
-          
-          <button onclick="simulateRedirect('Corporate Client Portal', 'https://client.smartparking-pms.com')" class="portal-btn">
-            Login as Client
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- About System Section -->
-    <section id="about" class="about-section reveal-element">
-      <div class="grid-2">
-        <div class="about-details">
-          <span class="section-tag">About System</span>
-          <h2 class="section-title">Professional, Smart, Technology-Driven</h2>
-          <p class="section-subtitle" style="margin-bottom: 1.5rem;">
-            Smart Parking Management System leverages modern computer vision (ANPR) and automated lane controllers to keep parking facilities fluid and safe. We transform empty space into structured, revenue-driving assets.
-          </p>
-          <p class="hero-desc" style="font-size: 0.95rem; margin-bottom: 2rem;">
-            By integrating secure authentication schemes and responsive dashboards, administrators can monitor peak throughput periods, modify zone tariffs in real-time, and guarantee seamless entry procedures for high-priority corporate clients.
-          </p>
-          
-          <div class="about-bullets">
-            <div class="about-bullet">
-              <div class="about-bullet-icon">✓</div>
-              <div class="about-bullet-content">
-                <h4>Dynamic Pricing Engine</h4>
-                <p>Modify tariffs relative to parking zone load factors automatically.</p>
-              </div>
-            </div>
-            <div class="about-bullet">
-              <div class="about-bullet-icon">✓</div>
-              <div class="about-bullet-content">
-                <h4>99.9% ANPR Matching</h4>
-                <p>Read dirty or dark license plates easily with neural network filters.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="about-img-container">
-          <!-- Interactive Mock dashboard graphical representation -->
-          <div class="about-dashboard-mock">
-            <div class="mock-titlebar">
-              <div class="mock-window-dots">
-                <div class="mock-dot"></div>
-                <div class="mock-dot"></div>
-                <div class="mock-dot"></div>
-              </div>
-              <span>weekly_analytics_v2.0.csv</span>
-            </div>
-            <div class="mock-body">
-              <div style="font-size: 0.8rem; margin-bottom: 0.5rem; font-weight: 600;">System Occupancy Peak Cycles (Weekly)</div>
-              <div class="mock-graph-row" id="mockGraphRow">
-                <!-- Graphical bars generated via JS -->
-              </div>
-              <div class="mock-info-grid">
-                <div class="mock-info-card">
-                  <div class="mock-info-num">89%</div>
-                  <div class="mock-info-lbl">Peak Occupancy</div>
-                </div>
-                <div class="mock-info-card">
-                  <div class="mock-info-num">14,239</div>
-                  <div class="mock-info-lbl">Total Vehicles</div>
-                </div>
-                <div class="mock-info-card">
-                  <div class="mock-info-num">&plus;32%</div>
-                  <div class="mock-info-lbl">Throughput Inc.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials-section reveal-element">
-      <div style="text-align: center; display: flex; flex-direction: column; align-items: center;">
-        <span class="section-tag">Client Reviews</span>
-        <h2 class="section-title">Trusted by Facility Owners</h2>
-        <p class="section-subtitle">
-          Discover how Smart Parking is improving driver satisfaction and logistics control in parking environments globally.
-        </p>
-      </div>
-
-      <div class="testimonials-grid">
-        <!-- Card 1 -->
-        <div class="testimonial-card">
-          <div class="testimonial-rating">★★★★★</div>
-          <p class="testimonial-quote">
-            "Automated vehicle throughput has increased by over 40% since integration. Camera matching is extremely reliable, and we eliminated physical ticketing issues entirely."
-          </p>
-          <div class="testimonial-author">
-            <div class="author-avatar" style="background-color: var(--primary-glow); color: var(--primary);">FM</div>
-            <div class="author-details">
-              <h4>Faisal Malik</h4>
-              <span>Director of Logistics, Center Point Plaza</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="testimonial-card">
-          <div class="testimonial-rating">★★★★★</div>
-          <p class="testimonial-quote">
-            "Managing reserved spaces for our 400+ corporate clients was a manual nightmare. Now, spaces are dynamically pooled and managed directly through their client access portal."
-          </p>
-          <div class="testimonial-author">
-            <div class="author-avatar" style="background-color: rgba(59, 130, 246, 0.15); color: #3b82f6;">SN</div>
-            <div class="author-details">
-              <h4>Sarah Naqvi</h4>
-              <span>Corporate Accounts Manager, IP Towers</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="testimonial-card">
-          <div class="testimonial-rating">★★★★★</div>
-          <p class="testimonial-quote">
-            "Average vehicle exit delay at the gates collapsed from 12 seconds to under 2 seconds. The cashierless validation loop paid for the hardware installation cost in 4 months."
-          </p>
-          <div class="testimonial-author">
-            <div class="author-avatar" style="background-color: rgba(239, 68, 68, 0.15); color: #ef4444;">KM</div>
-            <div class="author-details">
-              <h4>Kamran Mughal</h4>
-              <span>Operations Head, Jinnah Int'l Cargo Gate</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQs Accordion Section -->
-    <section id="faqs" class="faq-section reveal-element">
-      <div style="text-align: center; display: flex; flex-direction: column; align-items: center;">
-        <span class="section-tag">Help Center</span>
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <p class="section-subtitle">
-          Find fast answers regarding system integrations, ANPR hardware requirements, portal management, and billing loops.
-        </p>
-      </div>
-
-      <div class="faq-container">
-        <!-- FAQ 1 -->
-        <details class="faq-item">
-          <summary class="faq-question">How accurate is the ANPR camera system in low-light conditions?</summary>
-          <div class="faq-answer">
-            <p>Our Neural Network ANPR system delivers over 99.4% reading accuracy. It uses specialized infrared shutter controls to identify license plates instantly under heavy rain, dense fog, or complete night darkness.</p>
-          </div>
-        </details>
-
-        <!-- FAQ 2 -->
-        <details class="faq-item">
-          <summary class="faq-question">Can the client portal integrate with existing corporate ERP systems?</summary>
-          <div class="faq-answer">
-            <p>Yes. Smart Parking includes comprehensive REST API webhooks. You can easily synchronize active employee directories, export weekly accounting logs (CSV), and import invoicing data automatically into platforms like SAP or Microsoft Dynamics.</p>
-          </div>
-        </details>
-
-        <!-- FAQ 3 -->
-        <details class="faq-item">
-          <summary class="faq-question">What happens if the local facility internet connection goes offline?</summary>
-          <div class="faq-answer">
-            <p>Every gate controller lane operates on decentralized databases. They can validate VIP registrations, log session details, and trigger barriers offline. Once internet connectivity is restored, the logs sync back up with the cloud database automatically.</p>
-          </div>
-        </details>
-      </div>
-    </section>
-
-    <!-- App Download Section -->
-    <section id="download" class="download-section reveal-element">
-      <div class="grid-2">
-        <div class="download-content">
-          <span class="section-tag">Companion Apps</span>
-          <h2 class="section-title">Get the Smart Parking Companion App</h2>
-          <p class="section-subtitle" style="margin-bottom: 2.25rem;">
-            Experience cashierless parking validation, manage reservations, secure spot pools, and access active parking passes seamlessly with the official companion app.
-          </p>
-          <div class="download-buttons">
-            <!-- App Store button -->
-            <a href="https://apps.apple.com/pk/app/parkify-smart-parking/id6766315519" target="_blank" rel="noopener noreferrer" class="app-btn apple">
-              <svg class="app-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 4.17c.66-.81 1.11-1.93.99-3.06-1 .04-2.21.67-2.93 1.49-.62.69-1.16 1.84-1.01 2.96 1.12.09 2.27-.57 2.95-1.39z"/>
-              </svg>
-              <div class="app-btn-text">
-                <span class="app-btn-sub">Download on the</span>
-                <span class="app-btn-main">App Store</span>
-              </div>
-            </a>
-            
-            <!-- Google Play button -->
-            <a href="https://play.google.com/store/apps/details?id=com.cdaparkingapp&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" class="app-btn google">
-              <svg class="app-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 3.14a1.64 1.64 0 0 0-.39 1.12v15.48a1.64 1.64 0 0 0 .39 1.12l.07.07L14.7 12l-.07-.07L5.07 3.07l-.07.07zm10.74 8.79l3.07-3.07L5.94 3.73a1.44 1.44 0 0 0-1.18 0l11 11.07.07-.07zM6 18.23l10.9-10.9L6 7.33v10.9zm13.13-5.26c.45-.25.75-.72.75-1.27s-.3-1.02-.75-1.27l-3.32-1.9L12.5 12l3.31 3.32 3.32-1.9z"/>
-              </svg>
-              <div class="app-btn-text">
-                <span class="app-btn-sub">GET IT ON</span>
-                <span class="app-btn-main">Google Play</span>
-              </div>
-            </a>
-          </div>
-        </div>
-        
-        <div class="download-visual">
-          <div class="visual-glowing-back"></div>
-          <!-- Premium CSS phone mockup -->
-          <div class="phone-mockup">
-            <div class="phone-screen">
-              <div class="phone-header-notch">
-                <div class="phone-notch-speaker"></div>
-                <div class="phone-notch-cam"></div>
-              </div>
-              <div class="phone-app-content">
-                <div class="phone-nav">
-                  <div style="font-weight: 700; color: var(--primary); font-family: var(--font-heading);">Smart Parking</div>
-                  <div class="phone-status-dot"></div>
-                </div>
-                <div class="phone-card">
-                  <div style="font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase;">Active Reservation</div>
-                  <div style="font-size: 0.9rem; font-weight: 700; margin: 0.15rem 0 0.5rem; color: var(--text-main); font-family: var(--font-heading);">Smart Parking Pass</div>
-                  
-                  <!-- CSS QR code visual representation -->
-                  <div class="phone-qr-box">
-                    <div class="phone-qr-line"></div>
-                    <div style="width: 50px; height: 50px; border: 2px solid var(--primary); padding: 2px; display: flex; flex-wrap: wrap; gap: 2px; margin: 0 auto;">
-                      <div style="width: 14px; height: 14px; background: var(--text-main);"></div>
-                      <div style="width: 14px; height: 14px; background: transparent;"></div>
-                      <div style="width: 14px; height: 14px; background: var(--text-main);"></div>
-                      <div style="width: 14px; height: 14px; background: transparent;"></div>
-                      <div style="width: 14px; height: 14px; background: var(--text-main);"></div>
-                      <div style="width: 14px; height: 14px; background: var(--text-main);"></div>
-                      <div style="width: 14px; height: 14px; background: var(--text-main);"></div>
-                      <div style="width: 14px; height: 14px; background: transparent;"></div>
-                      <div style="width: 14px; height: 14px; background: var(--text-main);"></div>
-                    </div>
-                  </div>
-                  <div style="font-size: 0.6rem; color: var(--text-muted); margin-top: 0.4rem; text-align: center;">Scan at Gate 03 Entrance</div>
-                </div>
-                <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); border-radius: 6px; padding: 0.5rem; display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.65rem; margin-top: 0.75rem;">
-                  <div style="display: flex; justify-content: space-between;"><span style="color: var(--text-muted);">Vehicle Plate</span><span style="font-weight:600;">ABC-987</span></div>
-                  <div style="display: flex; justify-content: space-between;"><span style="color: var(--text-muted);">Assigned Spot</span><span style="font-weight:600; color: var(--primary);">Level 01, A04</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer & Contact Details -->
-  <footer>
-    <div class="footer-container">
-      <div class="footer-brand">
+    <!-- Header & Navigation -->
+    <header id="header">
+      <nav class="nav-container">
         <a href="#" class="logo-link">
-          <svg class="logo-svg" style="height: 34px;" viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20 70C35 40 55 10 90 15C75 40 55 85 20 70Z" fill="#1d4ed8" opacity="0.85"/>
-            <path d="M15 75C40 55 70 30 100 45C75 60 45 90 15 75Z" fill="#3cb779" opacity="0.9"/>
+          <!-- SVG Smart Parking Wave/Leaf Stylized Logo -->
+          <svg
+            class="logo-svg"
+            viewBox="0 0 120 100"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <!-- Blue wave -->
+            <path
+              d="M20 70C35 40 55 10 90 15C75 40 55 85 20 70Z"
+              fill="#1d4ed8"
+              opacity="0.85"
+            />
+            <!-- Green wave -->
+            <path
+              d="M15 75C40 55 70 30 100 45C75 60 45 90 15 75Z"
+              fill="#3cb779"
+              opacity="0.9"
+            />
+            <!-- Little dot connector -->
             <circle cx="50" cy="48" r="4" fill="#ffffff" />
           </svg>
           <div class="logo-text">
-            <span class="brand-bold">Smart</span><span class="brand-color">Parking</span>
+            <span class="brand-bold">Smart</span>
+            <span class="brand-color">Parking</span>
           </div>
         </a>
-        <p class="footer-desc">
-          Professional, secure, and technology-driven vehicle logistics management. Empowering spaces through state-of-the-art automation.
+
+        <!-- Desktop Menu -->
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#" class="nav-item active" id="nav-home">Home</a></li>
+          <li>
+            <a href="#features" class="nav-item" id="nav-features">Features</a>
+          </li>
+          <li>
+            <a href="#workflow" class="nav-item" id="nav-workflow"
+              >How It Works</a
+            >
+          </li>
+          <li>
+            <a href="#portals" class="nav-item" id="nav-portals"
+              >Access Portals</a
+            >
+          </li>
+          <li>
+            <a href="#about" class="nav-item" id="nav-about">About Solution</a>
+          </li>
+          <li>
+            <a href="#download" class="nav-item" id="nav-download"
+              >Mobile App</a
+            >
+          </li>
+          <li>
+            <button onclick="scrollToElement('#portals')" class="nav-btn">
+              Access Login
+            </button>
+          </li>
+        </ul>
+
+        <!-- Mobile Hamburger Menu Button -->
+        <button
+          class="mobile-menu-btn"
+          id="mobileMenuBtn"
+          aria-label="Toggle Navigation Menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section" id="home">
+        <div class="hero-content-wrapper">
+          <div class="hero-content">
+            <div class="hero-tag">
+              <span class="pulse"></span>
+              <span>Enterprise Suite v4.2 &bull; Active & Online</span>
+            </div>
+            <h1 class="hero-title">
+              Next-Gen
+              <span class="gradient-text">Intelligent Parking</span> Management
+            </h1>
+            <p class="hero-desc">
+              Streamline vehicle entry-exit rates, automate ticket generation,
+              and optimize floor space allocation with our secure, IoT-connected
+              smart parking ecosystem.
+            </p>
+            <div class="hero-actions">
+              <button onclick="scrollToElement('#portals')" class="btn-primary">
+                Access System Portals
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+              <button onclick="scrollToElement('#about')" class="btn-secondary">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero stats moved outside wrapper for responsive ordering -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num" id="stat-slots">99.8</span>
+            <span class="stat-label">System Uptime</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num" id="stat-cameras">10</span>
+            <span class="stat-label">ANPR Accuracy</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num" id="stat-clients">200</span>
+            <span class="stat-label">Locations Monitored</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section id="features" class="features-section reveal-element">
+        <div
+          style="
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          "
+        >
+          <span class="section-tag">Key Pillars</span>
+          <h2 class="section-title">Cutting-Edge Features</h2>
+          <p class="section-subtitle">
+            Engineered for high-throughput transit points, Smart Parking
+            provides complete visibility and command over parking environments.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Feature 1 -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg
+                class="feature-icon"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                ></path>
+              </svg>
+            </div>
+            <h3>Real-time Monitoring</h3>
+            <p>
+              Instantly tracks slot utilization and occupancy trends. Prevents
+              driver frustration by directing them straight to vacant stalls.
+            </p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg
+                class="feature-icon"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z"
+                ></path>
+              </svg>
+            </div>
+            <h3>Automated Ticketing</h3>
+            <p>
+              Generates encrypted paperless receipts or entry barcodes
+              instantly. Simplifies cashier tasks and decreases vehicle lane
+              delays.
+            </p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg
+                class="feature-icon"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                ></path>
+              </svg>
+            </div>
+            <h3>Corporate Dashboards</h3>
+            <p>
+              Allows businesses to reserve zones, manage employee season passes,
+              and receive automated weekly invoicing summaries.
+            </p>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg
+                class="feature-icon"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                ></path>
+              </svg>
+            </div>
+            <h3>Reporting & Analytics</h3>
+            <p>
+              Aggregates traffic graphs, peak-hour bottlenecks, and financial
+              statistics. Generates smart reports for managers automatically.
+            </p>
+          </div>
+
+          <!-- Feature 5 -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg
+                class="feature-icon"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                ></path>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                ></path>
+              </svg>
+            </div>
+            <h3>ANPR Scanning</h3>
+            <p>
+              Identifies number plates within milliseconds. Cross-checks
+              blacklists and opens barriers automatically for verified
+              employees.
+            </p>
+          </div>
+
+          <!-- Feature 6 -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg
+                class="feature-icon"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+                ></path>
+              </svg>
+            </div>
+            <h3>Mobile Touch Optimized</h3>
+            <p>
+              Fully optimized for touch gestures. Download the companion
+              application on
+              <a
+                href="https://apps.apple.com/pk/app/parkify-smart-parking/id6766315519"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="
+                  color: var(--primary);
+                  font-weight: 600;
+                  text-decoration: underline;
+                "
+                >iOS (Apple App Store)</a
+              >
+              and
+              <a
+                href="https://play.google.com/store/apps/details?id=com.cdaparkingapp&pcampaignid=web_share"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="
+                  color: var(--primary);
+                  font-weight: 600;
+                  text-decoration: underline;
+                "
+                >Android (Google Play Store)</a
+              >.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works Section -->
+      <section id="workflow" class="workflow-section reveal-element">
+        <div
+          style="
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          "
+        >
+          <span class="section-tag">Operations</span>
+          <h2 class="section-title">How Smart Parking Works</h2>
+          <p class="section-subtitle">
+            A fully automated, high-throughput vehicle lifecycle engineered for
+            corporate facilities and premium office spaces.
+          </p>
+        </div>
+
+        <div class="workflow-steps">
+          <div class="workflow-step-connector"></div>
+
+          <!-- Step 1 -->
+          <div class="workflow-step-card">
+            <div class="step-badge">1</div>
+            <h3>ANPR Scanning</h3>
+            <p>
+              As the vehicle approaches the lane, high-resolution cameras
+              identify the plate number within 200 milliseconds.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="workflow-step-card">
+            <div class="step-badge">2</div>
+            <h3>Barrier Release</h3>
+            <p>
+              The gate opens automatically for registered VIPs and pass holders,
+              or prints an encrypted ticket for visitors.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="workflow-step-card">
+            <div class="step-badge">3</div>
+            <h3>Smart Navigation</h3>
+            <p>
+              Floor indicators route drivers to their assigned parking zones,
+              avoiding layout bottlenecks.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="workflow-step-card">
+            <div class="step-badge">4</div>
+            <h3>Cashless Exit</h3>
+            <p>
+              Exit cameras confirm validation status, process digital payments
+              automatically, and open the gate.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- User Portals Section -->
+      <section id="portals" class="portals-section reveal-element">
+        <div
+          style="
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          "
+        >
+          <span class="section-tag">System Gates</span>
+          <h2 class="section-title">Secure Portal Integration</h2>
+          <p class="section-subtitle">
+            Select your dedicated portal to access parking configuration,
+            operational modules, or corporate user summaries securely.
+          </p>
+        </div>
+
+        <div class="portals-grid">
+          <!-- Admin Portal Card -->
+          <div class="portal-card admin">
+            <div class="portal-header">
+              <span class="portal-badge">Admin Access</span>
+              <h3 class="portal-title">System Admin</h3>
+              <p class="portal-desc">
+                Manage broad settings, rates, security clearances, and global
+                financial configurations.
+              </p>
+
+              <ul class="portal-features-list">
+                <li class="portal-feat-item">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2.5"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  Configure parking zone rates
+                </li>
+                <li class="portal-feat-item">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2.5"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  Manage operator & client accounts
+                </li>
+                <li class="portal-feat-item">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2.5"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  Review global system analytics
+                </li>
+              </ul>
+            </div>
+
+            <button
+              onclick="
+                simulateRedirect(
+                  'Admin Portal',
+                  'https://stage-pms-admin.immensecode.ai/',
+                )
+              "
+              class="portal-btn"
+            >
+              Login as Admin
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+                <polyline points="10 17 15 12 10 7"></polyline>
+                <line x1="15" y1="12" x2="3" y2="12"></line>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Operator Portal Card -->
+          <div class="portal-card operator">
+            <div class="portal-header">
+              <span class="portal-badge">Operator Access</span>
+              <h3 class="portal-title">Parking Operator</h3>
+              <p class="portal-desc">
+                Monitor live lane transactions, validate tickets manually, and
+                check camera feeds.
+              </p>
+
+              <ul class="portal-features-list">
+                <li class="portal-feat-item">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2.5"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  Live gate & barrier override
+                </li>
+                <li class="portal-feat-item">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2.5"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  Process physical parking tickets
+                </li>
+                <li class="portal-feat-item">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2.5"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  Log shift details and receipts
+                </li>
+              </ul>
+            </div>
+
+            <button
+              onclick="
+                simulateRedirect(
+                  'Operator Portal',
+                  'https://stage-pms-user.immensecode.ai/',
+                )
+              "
+              class="portal-btn"
+            >
+              Login as Operator
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+                <polyline points="10 17 15 12 10 7"></polyline>
+                <line x1="15" y1="12" x2="3" y2="12"></line>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Corporate Client Portal Card -->
+          <div class="portal-card client">
+            <div class="portal-header">
+              <span class="portal-badge">Client Access</span>
+              <h3 class="portal-title">Corporate Client</h3>
+              <p class="portal-desc">
+                Manage employee parking clearances, invoices, and reserve
+                corporate zones.
+              </p>
+
+              <ul class="portal-features-list">
+                <li class="portal-feat-item">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2.5"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  Reserve spot pools dynamically
+                </li>
+                <li class="portal-feat-item">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2.5"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  Track employee validation history
+                </li>
+                <li class="portal-feat-item">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2.5"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  Download unified monthly invoices
+                </li>
+              </ul>
+            </div>
+
+            <button
+              onclick="
+                simulateRedirect(
+                  'Corporate Client Portal',
+                  'https://stage-pms-corporate.immensecode.ai/',
+                )
+              "
+              class="portal-btn"
+            >
+              Login as Client
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+                <polyline points="10 17 15 12 10 7"></polyline>
+                <line x1="15" y1="12" x2="3" y2="12"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- About System Section -->
+      <section id="about" class="about-section reveal-element">
+        <div class="grid-2">
+          <div class="about-details">
+            <span class="section-tag">About System</span>
+            <h2 class="section-title">
+              Professional, Smart, Technology-Driven
+            </h2>
+            <p class="section-subtitle" style="margin-bottom: 1.5rem">
+              Smart Parking Management System leverages modern computer vision
+              (ANPR) and automated lane controllers to keep parking facilities
+              fluid and safe. We transform empty space into structured,
+              revenue-driving assets.
+            </p>
+            <p
+              class="hero-desc"
+              style="font-size: 0.95rem; margin-bottom: 2rem"
+            >
+              By integrating secure authentication schemes and responsive
+              dashboards, administrators can monitor peak throughput periods,
+              modify zone tariffs in real-time, and guarantee seamless entry
+              procedures for high-priority corporate clients.
+            </p>
+
+            <div class="about-bullets">
+              <div class="about-bullet">
+                <div class="about-bullet-icon">✓</div>
+                <div class="about-bullet-content">
+                  <h4>Dynamic Pricing Engine</h4>
+                  <p>
+                    Modify tariffs relative to parking zone load factors
+                    automatically.
+                  </p>
+                </div>
+              </div>
+              <div class="about-bullet">
+                <div class="about-bullet-icon">✓</div>
+                <div class="about-bullet-content">
+                  <h4>99.9% ANPR Matching</h4>
+                  <p>
+                    Read dirty or dark license plates easily with neural network
+                    filters.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-img-container">
+            <!-- Interactive Mock dashboard graphical representation -->
+            <div class="about-dashboard-mock">
+              <div class="mock-titlebar">
+                <div class="mock-window-dots">
+                  <div class="mock-dot"></div>
+                  <div class="mock-dot"></div>
+                  <div class="mock-dot"></div>
+                </div>
+                <span>weekly_analytics_v2.0.csv</span>
+              </div>
+              <div class="mock-body">
+                <div
+                  style="
+                    font-size: 0.8rem;
+                    margin-bottom: 0.5rem;
+                    font-weight: 600;
+                  "
+                >
+                  System Occupancy Peak Cycles (Weekly)
+                </div>
+                <div class="mock-graph-row" id="mockGraphRow">
+                  <!-- Graphical bars generated via JS -->
+                </div>
+                <div class="mock-info-grid">
+                  <div class="mock-info-card">
+                    <div class="mock-info-num">89%</div>
+                    <div class="mock-info-lbl">Peak Occupancy</div>
+                  </div>
+                  <div class="mock-info-card">
+                    <div class="mock-info-num">14,239</div>
+                    <div class="mock-info-lbl">Total Vehicles</div>
+                  </div>
+                  <div class="mock-info-card">
+                    <div class="mock-info-num">&plus;32%</div>
+                    <div class="mock-info-lbl">Throughput Inc.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="testimonials-section reveal-element">
+        <div
+          style="
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          "
+        >
+          <span class="section-tag">Client Reviews</span>
+          <h2 class="section-title">Trusted by Facility Owners</h2>
+          <p class="section-subtitle">
+            Discover how Smart Parking is improving driver satisfaction and
+            logistics control in parking environments globally.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Card 1 -->
+          <div class="testimonial-card">
+            <div class="testimonial-rating">★★★★★</div>
+            <p class="testimonial-quote">
+              "Automated vehicle throughput has increased by over 40% since
+              integration. Camera matching is extremely reliable, and we
+              eliminated physical ticketing issues entirely."
+            </p>
+            <div class="testimonial-author">
+              <div
+                class="author-avatar"
+                style="
+                  background-color: var(--primary-glow);
+                  color: var(--primary);
+                "
+              >
+                FM
+              </div>
+              <div class="author-details">
+                <h4>Faisal Malik</h4>
+                <span>Director of Logistics, Center Point Plaza</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="testimonial-card">
+            <div class="testimonial-rating">★★★★★</div>
+            <p class="testimonial-quote">
+              "Managing reserved spaces for our 400+ corporate clients was a
+              manual nightmare. Now, spaces are dynamically pooled and managed
+              directly through their client access portal."
+            </p>
+            <div class="testimonial-author">
+              <div
+                class="author-avatar"
+                style="
+                  background-color: rgba(59, 130, 246, 0.15);
+                  color: #3b82f6;
+                "
+              >
+                SN
+              </div>
+              <div class="author-details">
+                <h4>Sarah Naqvi</h4>
+                <span>Corporate Accounts Manager, IP Towers</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="testimonial-card">
+            <div class="testimonial-rating">★★★★★</div>
+            <p class="testimonial-quote">
+              "Average vehicle exit delay at the gates collapsed from 12 seconds
+              to under 2 seconds. The cashierless validation loop paid for the
+              hardware installation cost in 4 months."
+            </p>
+            <div class="testimonial-author">
+              <div
+                class="author-avatar"
+                style="
+                  background-color: rgba(239, 68, 68, 0.15);
+                  color: #ef4444;
+                "
+              >
+                KM
+              </div>
+              <div class="author-details">
+                <h4>Kamran Mughal</h4>
+                <span>Operations Head, Jinnah Int'l Cargo Gate</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQs Accordion Section -->
+      <section id="faqs" class="faq-section reveal-element">
+        <div
+          style="
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          "
+        >
+          <span class="section-tag">Help Center</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">
+            Find fast answers regarding system integrations, ANPR hardware
+            requirements, portal management, and billing loops.
+          </p>
+        </div>
+
+        <div class="faq-container">
+          <!-- FAQ 1 -->
+          <details class="faq-item">
+            <summary class="faq-question">
+              How accurate is the ANPR camera system in low-light conditions?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Our Neural Network ANPR system delivers over 99.4% reading
+                accuracy. It uses specialized infrared shutter controls to
+                identify license plates instantly under heavy rain, dense fog,
+                or complete night darkness.
+              </p>
+            </div>
+          </details>
+
+          <!-- FAQ 2 -->
+          <details class="faq-item">
+            <summary class="faq-question">
+              Can the client portal integrate with existing corporate ERP
+              systems?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Yes. Smart Parking includes comprehensive REST API webhooks. You
+                can easily synchronize active employee directories, export
+                weekly accounting logs (CSV), and import invoicing data
+                automatically into platforms like SAP or Microsoft Dynamics.
+              </p>
+            </div>
+          </details>
+
+          <!-- FAQ 3 -->
+          <details class="faq-item">
+            <summary class="faq-question">
+              What happens if the local facility internet connection goes
+              offline?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Every gate controller lane operates on decentralized databases.
+                They can validate VIP registrations, log session details, and
+                trigger barriers offline. Once internet connectivity is
+                restored, the logs sync back up with the cloud database
+                automatically.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- App Download Section -->
+      <section id="download" class="download-section reveal-element">
+        <div class="grid-2">
+          <div class="download-content">
+            <span class="section-tag">Companion Apps</span>
+            <h2 class="section-title">Get the Smart Parking Companion App</h2>
+            <p class="section-subtitle" style="margin-bottom: 2.25rem">
+              Experience cashierless parking validation, manage reservations,
+              secure spot pools, and access active parking passes seamlessly
+              with the official companion app.
+            </p>
+            <div class="download-buttons">
+              <!-- App Store button -->
+              <a
+                href="https://apps.apple.com/pk/app/parkify-smart-parking/id6766315519"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="app-btn apple"
+              >
+                <svg
+                  class="app-icon"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 4.17c.66-.81 1.11-1.93.99-3.06-1 .04-2.21.67-2.93 1.49-.62.69-1.16 1.84-1.01 2.96 1.12.09 2.27-.57 2.95-1.39z"
+                  />
+                </svg>
+                <div class="app-btn-text">
+                  <span class="app-btn-sub">Download on the</span>
+                  <span class="app-btn-main">App Store</span>
+                </div>
+              </a>
+
+              <!-- Google Play button -->
+              <a
+                href="https://play.google.com/store/apps/details?id=com.cdaparkingapp&pcampaignid=web_share"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="app-btn google"
+              >
+                <svg
+                  class="app-icon"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 3.14a1.64 1.64 0 0 0-.39 1.12v15.48a1.64 1.64 0 0 0 .39 1.12l.07.07L14.7 12l-.07-.07L5.07 3.07l-.07.07zm10.74 8.79l3.07-3.07L5.94 3.73a1.44 1.44 0 0 0-1.18 0l11 11.07.07-.07zM6 18.23l10.9-10.9L6 7.33v10.9zm13.13-5.26c.45-.25.75-.72.75-1.27s-.3-1.02-.75-1.27l-3.32-1.9L12.5 12l3.31 3.32 3.32-1.9z"
+                  />
+                </svg>
+                <div class="app-btn-text">
+                  <span class="app-btn-sub">GET IT ON</span>
+                  <span class="app-btn-main">Google Play</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="download-visual">
+            <div class="visual-glowing-back"></div>
+            <!-- Premium CSS phone mockup -->
+            <div class="phone-mockup">
+              <div class="phone-screen">
+                <div class="phone-header-notch">
+                  <div class="phone-notch-speaker"></div>
+                  <div class="phone-notch-cam"></div>
+                </div>
+                <div class="phone-app-content">
+                  <div class="phone-nav">
+                    <div
+                      style="
+                        font-weight: 700;
+                        color: var(--primary);
+                        font-family: var(--font-heading);
+                      "
+                    >
+                      Smart Parking
+                    </div>
+                    <div class="phone-status-dot"></div>
+                  </div>
+                  <div class="phone-card">
+                    <div
+                      style="
+                        font-size: 0.65rem;
+                        color: var(--text-muted);
+                        text-transform: uppercase;
+                      "
+                    >
+                      Active Reservation
+                    </div>
+                    <div
+                      style="
+                        font-size: 0.9rem;
+                        font-weight: 700;
+                        margin: 0.15rem 0 0.5rem;
+                        color: var(--text-main);
+                        font-family: var(--font-heading);
+                      "
+                    >
+                      Smart Parking Pass
+                    </div>
+
+                    <!-- CSS QR code visual representation -->
+                    <div class="phone-qr-box">
+                      <div class="phone-qr-line"></div>
+                      <div
+                        style="
+                          width: 50px;
+                          height: 50px;
+                          border: 2px solid var(--primary);
+                          padding: 2px;
+                          display: flex;
+                          flex-wrap: wrap;
+                          gap: 2px;
+                          margin: 0 auto;
+                        "
+                      >
+                        <div
+                          style="
+                            width: 14px;
+                            height: 14px;
+                            background: var(--text-main);
+                          "
+                        ></div>
+                        <div
+                          style="
+                            width: 14px;
+                            height: 14px;
+                            background: transparent;
+                          "
+                        ></div>
+                        <div
+                          style="
+                            width: 14px;
+                            height: 14px;
+                            background: var(--text-main);
+                          "
+                        ></div>
+                        <div
+                          style="
+                            width: 14px;
+                            height: 14px;
+                            background: transparent;
+                          "
+                        ></div>
+                        <div
+                          style="
+                            width: 14px;
+                            height: 14px;
+                            background: var(--text-main);
+                          "
+                        ></div>
+                        <div
+                          style="
+                            width: 14px;
+                            height: 14px;
+                            background: var(--text-main);
+                          "
+                        ></div>
+                        <div
+                          style="
+                            width: 14px;
+                            height: 14px;
+                            background: var(--text-main);
+                          "
+                        ></div>
+                        <div
+                          style="
+                            width: 14px;
+                            height: 14px;
+                            background: transparent;
+                          "
+                        ></div>
+                        <div
+                          style="
+                            width: 14px;
+                            height: 14px;
+                            background: var(--text-main);
+                          "
+                        ></div>
+                      </div>
+                    </div>
+                    <div
+                      style="
+                        font-size: 0.6rem;
+                        color: var(--text-muted);
+                        margin-top: 0.4rem;
+                        text-align: center;
+                      "
+                    >
+                      Scan at Gate 03 Entrance
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      background: rgba(255, 255, 255, 0.02);
+                      border: 1px solid var(--border-color);
+                      border-radius: 6px;
+                      padding: 0.5rem;
+                      display: flex;
+                      flex-direction: column;
+                      gap: 0.35rem;
+                      font-size: 0.65rem;
+                      margin-top: 0.75rem;
+                    "
+                  >
+                    <div style="display: flex; justify-content: space-between">
+                      <span style="color: var(--text-muted)">Vehicle Plate</span
+                      ><span style="font-weight: 600">ABC-987</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between">
+                      <span style="color: var(--text-muted)">Assigned Spot</span
+                      ><span style="font-weight: 600; color: var(--primary)"
+                        >Level 01, A04</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer & Contact Details -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-brand">
+          <a href="#" class="logo-link">
+            <svg
+              class="logo-svg"
+              style="height: 34px"
+              viewBox="0 0 120 100"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20 70C35 40 55 10 90 15C75 40 55 85 20 70Z"
+                fill="#1d4ed8"
+                opacity="0.85"
+              />
+              <path
+                d="M15 75C40 55 70 30 100 45C75 60 45 90 15 75Z"
+                fill="#3cb779"
+                opacity="0.9"
+              />
+              <circle cx="50" cy="48" r="4" fill="#ffffff" />
+            </svg>
+            <div class="logo-text">
+              <span class="brand-bold">Smart</span
+              ><span class="brand-color">Parking</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            Professional, secure, and technology-driven vehicle logistics
+            management. Empowering spaces through state-of-the-art automation.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                ></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Quick Navigation</h4>
+          <div class="footer-links">
+            <a href="#" onclick="scrollToElement('#home')">Home Page</a>
+            <a href="#features">Key Features</a>
+            <a href="#portals">Portal Access</a>
+            <a href="#about">About Architecture</a>
+          </div>
+        </div>
+
+        <div class="footer-contact">
+          <h4 class="footer-col-title">Contact Support</h4>
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                ></path>
+              </svg>
+              <span>Smart Parking Solutions<br />Corporate Office</span>
+            </div>
+            <div class="contact-info-item">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 0 02.22 0L21 8M5 19h14a2 2 0 0 02-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 02 2z"
+                ></path>
+              </svg>
+              <a href="mailto:support@smartparking-pms.com"
+                >support@smartparking-pms.com</a
+              >
+            </div>
+            <div class="contact-info-item">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                ></path>
+              </svg>
+              <a href="tel:+9221111252512">+92-21-111-PARK-12</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; 2026 Smart Parking Solutions. All rights reserved. Secure HTTPS
+          Access Guaranteed.
         </p>
-        <div class="footer-socials">
-          <a href="#" class="social-link" aria-label="LinkedIn">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-          </a>
-          <a href="#" class="social-link" aria-label="Twitter">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
-          </a>
-        </div>
+        <p>Designed for Compliance, Reliability, and High-Throughput</p>
       </div>
+    </footer>
 
-      <div class="footer-links-col">
-        <h4 class="footer-col-title">Quick Navigation</h4>
-        <div class="footer-links">
-          <a href="#" onclick="scrollToElement('#home')">Home Page</a>
-          <a href="#features">Key Features</a>
-          <a href="#portals">Portal Access</a>
-          <a href="#about">About Architecture</a>
+    <!-- Interactive secure redirecting modal overlay -->
+    <div class="redirect-modal" id="redirectModal">
+      <div class="modal-content">
+        <div class="loader-spinner"></div>
+        <h3 class="modal-title">Initiating Secure Handshake</h3>
+        <div class="modal-url" id="modalRedirectUrl">
+          https://admin.smartparking-pms.com
         </div>
-      </div>
-
-      <div class="footer-contact">
-        <h4 class="footer-col-title">Contact Support</h4>
-        <div class="contact-info-list">
-          <div class="contact-info-item">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-            </svg>
-            <span>Smart Parking Solutions<br>Corporate Office</span>
-          </div>
-          <div class="contact-info-item">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 0 02.22 0L21 8M5 19h14a2 2 0 0 02-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 02 2z"></path>
-            </svg>
-            <a href="mailto:support@smartparking-pms.com">support@smartparking-pms.com</a>
-          </div>
-          <div class="contact-info-item">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-            </svg>
-            <a href="tel:+9221111252512">+92-21-111-PARK-12</a>
-          </div>
-        </div>
+        <p class="modal-text">
+          Verifying security token and routing traffic to the portal...
+        </p>
       </div>
     </div>
 
-    <div class="footer-bottom">
-      <p>&copy; 2026 Smart Parking Solutions. All rights reserved. Secure HTTPS Access Guaranteed.</p>
-      <p>Designed for Compliance, Reliability, and High-Throughput</p>
-    </div>
-  </footer>
-
-  <!-- Interactive secure redirecting modal overlay -->
-  <div class="redirect-modal" id="redirectModal">
-    <div class="modal-content">
-      <div class="loader-spinner"></div>
-      <h3 class="modal-title">Initiating Secure Handshake</h3>
-      <div class="modal-url" id="modalRedirectUrl">https://admin.smartparking-pms.com</div>
-      <p class="modal-text">Verifying security token and routing traffic to the portal...</p>
-    </div>
-  </div>
-
-  <!-- JavaScript Behavior File -->
-  <script src="app.js"></script>
-</body>
+    <!-- JavaScript Behavior File -->
+    <script src="app.js"></script>
+  </body>
 </html>
