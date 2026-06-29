@@ -769,7 +769,7 @@ section {
 
 .portals-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
 }
 
@@ -841,6 +841,24 @@ section {
   border-color: rgba(60, 183, 121, 0.2);
   color: var(--primary);
   background: var(--primary-glow);
+}
+
+.portal-card.ai .portal-badge {
+  border-color: rgba(139, 92, 246, 0.3);
+  color: #a78bfa;
+  background: rgba(139, 92, 246, 0.08);
+}
+
+.portal-card.ai:hover {
+  box-shadow: 0 12px 35px -6px rgba(0, 0, 0, 0.5), 0 0 20px -5px rgba(139, 92, 246, 0.3);
+  border-color: rgba(139, 92, 246, 0.5);
+}
+
+.portal-card.ai:hover .portal-btn {
+  background: #7c3aed;
+  color: #ffffff;
+  border-color: #7c3aed;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
 }
 
 .portal-title {
@@ -2023,13 +2041,7 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
-  
-  .portals-grid .portal-card:last-child {
-    grid-column: span 2;
-    max-width: 500px;
-    margin: 0 auto;
-    width: 100%;
-  }
+
   
   .footer-container {
     grid-template-columns: 1fr 1fr;
